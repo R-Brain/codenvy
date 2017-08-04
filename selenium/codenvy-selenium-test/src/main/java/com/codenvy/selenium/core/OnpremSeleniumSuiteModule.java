@@ -33,6 +33,7 @@ import org.eclipse.che.selenium.core.client.TestAuthServiceClient;
 import org.eclipse.che.selenium.core.client.TestMachineServiceClient;
 import org.eclipse.che.selenium.core.configuration.SeleniumTestConfiguration;
 import org.eclipse.che.selenium.core.configuration.TestConfiguration;
+import org.eclipse.che.selenium.core.factory.TestHttpJsonRequestFactory;
 import org.eclipse.che.selenium.core.provider.CheTestSvnPasswordProvider;
 import org.eclipse.che.selenium.core.provider.CheTestSvnRepo1Provider;
 import org.eclipse.che.selenium.core.provider.CheTestSvnRepo2Provider;
@@ -109,7 +110,7 @@ public class OnpremSeleniumSuiteModule extends AbstractModule {
 
     @Provides
     public SshServiceClient getSshServiceClient(TestApiEndpointUrlProvider apiEndpointUrlProvider,
-                                                HttpJsonRequestFactory requestFactory) {
+                                                TestHttpJsonRequestFactory requestFactory) {
         return new HttpSshServiceClient(apiEndpointUrlProvider.get().toString(), requestFactory);
     }
 }
