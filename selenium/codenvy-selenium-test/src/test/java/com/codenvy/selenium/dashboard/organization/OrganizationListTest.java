@@ -53,7 +53,7 @@ public class OrganizationListTest {
     @BeforeClass
     public void setUp() throws Exception {
         dashboard.open(adminTestUser.getAuthToken());
-        organizations = organizationServiceClient.getOrganizations(adminTestUser.getAuthToken());
+        organizations = organizationServiceClient.getOrganizationsAsAdmin();
     }
 
     @Test

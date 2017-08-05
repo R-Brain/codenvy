@@ -66,15 +66,15 @@ public class BulkOrganizationDeletionTest {
         String organizationName1 = NameGenerator.generate("organization", 5);
         String organizationName2 = NameGenerator.generate("organization", 5);
 
-        organization1 = organizationServiceClient.createOrganization(organizationName1, adminTestUser.getAuthToken());
-        organization2 = organizationServiceClient.createOrganization(organizationName2, adminTestUser.getAuthToken());
-        organizations = organizationServiceClient.getOrganizations(adminTestUser.getAuthToken());
+        organization1 = organizationServiceClient.createOrganizationAsAdmin(organizationName1);
+        organization2 = organizationServiceClient.createOrganizationAsAdmin(organizationName2);
+        organizations = organizationServiceClient.getOrganizationsAsAdmin();
     }
 
     @AfterClass
     public void tearDown() throws Exception {
-        organizationServiceClient.deleteOrganizationById(organization1.getId(), adminTestUser.getAuthToken());
-        organizationServiceClient.deleteOrganizationById(organization2.getId(), adminTestUser.getAuthToken());
+        organizationServiceClient.deleteOrganizationByIdAsAdmin(organization1.getId());
+        organizationServiceClient.deleteOrganizationByIdAsAdmin(organization2.getId());
     }
 
     @Test

@@ -106,8 +106,8 @@ public class UserLicenseNumberLimitExceededTest {
 
     @AfterClass
     public void tearDown() throws Exception {
-        workspaceServiceClient.delete(WS_NAME, defaultTestUser.getName(), defaultTestUser.getAuthToken());
-        workspaceServiceClient.delete(WS_NAME, adminTestUser.getName(), adminTestUser.getAuthToken());
+        workspaceServiceClient.delete(WS_NAME, defaultTestUser.getName());
+        workspaceServiceClient.delete(WS_NAME, adminTestUser.getName());
     }
 
     @Test

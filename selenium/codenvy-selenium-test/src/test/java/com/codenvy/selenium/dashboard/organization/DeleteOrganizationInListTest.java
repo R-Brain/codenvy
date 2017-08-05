@@ -64,13 +64,13 @@ public class DeleteOrganizationInListTest {
         dashboard.open(adminTestUser.getAuthToken());
 
         String organizationName = NameGenerator.generate("organization", 5);
-        organization = organizationServiceClient.createOrganization(organizationName, adminTestUser.getAuthToken());
-        organizations = organizationServiceClient.getOrganizations(adminTestUser.getAuthToken());
+        organization = organizationServiceClient.createOrganizationAsAdmin(organizationName);
+        organizations = organizationServiceClient.getOrganizationsAsAdmin();
     }
 
     @AfterClass
     public void tearDown() throws Exception {
-        organizationServiceClient.deleteOrganizationById(organization.getId(), adminTestUser.getAuthToken());
+        organizationServiceClient.deleteOrganizationByIdAsAdmin(organization.getId());
     }
 
     @Test

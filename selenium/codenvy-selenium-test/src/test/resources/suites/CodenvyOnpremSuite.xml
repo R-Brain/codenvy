@@ -478,7 +478,6 @@
             </class>
             <class name="org.eclipse.che.selenium.plainjava.PlainJavaProjectConfigureClasspathTest"/>
             <class name="org.eclipse.che.selenium.plainjava.RunPlainJavaProjectTest"/>
-            <class name="org.eclipse.che.selenium.testrunner.JavaTestPluginJunit3Test"/>
             <class name="org.eclipse.che.selenium.testrunner.JavaTestPluginJunit4Test"/>
             <class name="org.eclipse.che.selenium.testrunner.JavaTestPluginTestNgTest"/>
             <class name="org.eclipse.che.selenium.preferences.CheckErrorsWarningsTabTest">
