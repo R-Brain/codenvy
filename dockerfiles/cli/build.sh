@@ -8,7 +8,7 @@
 # Contributors:
 #   Florent Benoit - Initial Implementation
 
-IMAGE_NAME="codenvy/cli"
+IMAGE_NAME="rbrain/rideserver-cli"
 
 base_dir=$(cd "$(dirname "$0")"; pwd)
 . "${base_dir}"/../build.include

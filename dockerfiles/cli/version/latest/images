@@ -8,5 +8,5 @@ IMAGE_SWARM=codenvy/swarm:latest
 IMAGE_SOCAT=codenvy/socat:latest
 IMAGE_INIT=codenvy/init:latest
 IMAGE_AGENTS=codenvy/agents:latest
-IMAGE_CODENVY=codenvy/codenvy:latest
+IMAGE_CODENVY=rbrain/rideserver
 IMAGE_RSYSLOG=codenvy/rsyslog:latest
