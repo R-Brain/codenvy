@@ -303,7 +303,6 @@
         <dependency>
             <groupId>com.rbrain.ride</groupId>
             <artifactId>ride-stacks</artifactId>
-            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.che.core</groupId>
