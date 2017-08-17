@@ -1,16 +1,18 @@
+--- 
+    layout : error-page 
+    title: R-Brain 
 ---
-    layout : error-page
-    title: Codenvy
----
-    <div class="container light">
-        <h1>INVALID FACTORY URL</h1>
+<div class="container light">
+    <h1>INVALID FACTORY URL</h1>
 
-        <hr class="subtitle-line">
+    <hr class="subtitle-line">
 
-        <style>
-            #errorMessage a {
-                color: #60AFD9;
-            }
-        </style>
-        <p id="errorMessage" style="text-align: center;"><%= request.getAttribute("javax.servlet.error.message") %></p>
-    </div>
+    <style>
+        #errorMessage a {
+            color: #60AFD9;
+        }
+    </style>
+    <p id="errorMessage" style="text-align: center;">
+        <%= request.getAttribute("javax.servlet.error.message") %>
+    </p>
+</div>

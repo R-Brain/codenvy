@@ -1,7 +1,7 @@
----
-layout : email-template
-title: Codenvy
-header: Workspace Invite
+--- 
+    layout : email-template 
+    title: R-Brain 
+    header: Workspace Invite 
 ---
 <table style="font-family: 'New Century Schoolbook', 'Crimson Text'; box-sizing: border-box; font-size: 13px; width: 100%; margin: 0; text-align: left; padding: 7px 25px 10px 10px;" width="100%" cellpadding="0" cellspacing="0">
     <tr>
@@ -12,11 +12,11 @@ header: Workspace Invite
                         <td style="font-family: 'New Century Schoolbook', 'Crimson Text'; box-sizing: border-box; font-size: 13px; vertical-align: top; max-width: 520px !important; clear: both !important; margin: 0 auto; padding: 0;">
                             <h4 style="{{site.h4_style}}"></h4>
                             <p style="{{site.paragraph_style}}">
-                                You have been invited by <span th:text="${initiator}"></span> to join their development workspace on Codenvy. To join their workspace create an account by clicking the link below:
+                                You have been invited by <span th:text="${initiator}"></span> to join their development workspace on R-Brain. To join their workspace create an account by clicking the link below:
                             </p>
                             <h4 style="{{site.h4_style}}"></h4>
                             <p style="{{site.paragraph_style}}">
-                               <span style="background: #00ff8c; padding: 5px 20px;">
+                                <span style="background: #00ff8c; padding: 5px 20px;">
                                    <a th:href="@{${joinLink}}" style="{{site.button_text_style}}" href="">JOIN THE WORKSPACE</a>
                                </span>
                             </p>
