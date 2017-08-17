@@ -13,9 +13,9 @@ pre_init() {
   # This must be incremented when BASE is incremented by an API developer
   CHE_CLI_API_VERSION=2
 
-  CHE_PRODUCT_NAME="CODENVY"
-  CHE_MINI_PRODUCT_NAME="codenvy"
-  CHE_FORMAL_PRODUCT_NAME="Codenvy"
+  CHE_PRODUCT_NAME="RBRAIN"
+  CHE_MINI_PRODUCT_NAME="rbrain"
+  CHE_FORMAL_PRODUCT_NAME="R-Brain"
   CHE_CONTAINER_ROOT="/data"
   CHE_ASSEMBLY_IN_REPO_MODULE_NAME="assembly/assembly-main"
   CHE_ASSEMBLY_IN_REPO="${CHE_ASSEMBLY_IN_REPO_MODULE_NAME}/target/codenvy-onpremises-*/"
@@ -26,7 +26,7 @@ pre_init() {
   CHE_LICENSE=true
   CHE_LICENSE_URL="https://codenvy.com/legal/fair-source/"
   CHE_SERVER_CONTAINER_NAME="${CHE_MINI_PRODUCT_NAME}_${CHE_MINI_PRODUCT_NAME}_1"
-  CHE_IMAGE_FULLNAME="codenvy/cli:<version>"
+  CHE_IMAGE_FULLNAME="rbrain/rideserver-cli:<version>"
   CODENVY_PORT=80
   CHE_MIN_RAM=1.5
   CHE_MIN_DISK=100

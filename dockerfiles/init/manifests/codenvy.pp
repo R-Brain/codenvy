@@ -10,7 +10,7 @@ node default {
 #    address of your Docker daemon. On many systems, especially those from cloud hosters
 #    like DigitalOcean, you must explicitly set this to the external IP address or
 #    DNS entry provided by the provider.
-  $host_url = getValue("CODENVY_HOST","codenvy.onprem")
+  $host_url = getValue("CODENVY_HOST","r-brain.onprem")
 
 ###############################
 # Docker IP adress on host
@@ -32,7 +32,7 @@ node default {
 #
   $codenvy_admin_name = getValue("CODENVY_ADMIN_NAME","admin")
   $codenvy_admin_initial_password = getValue("CODENVY_ADMIN_INITIAL_PASSWORD","password")
-  $codenvy_admin_email = getValue("CODENVY_ADMIN_EMAIL","admin@codenvy.onprem")
+  $codenvy_admin_email = getValue("CODENVY_ADMIN_EMAIL","admin@r-brain.onprem")
 
 ##############################
 # http / https configuration

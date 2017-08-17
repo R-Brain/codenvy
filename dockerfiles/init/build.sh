@@ -5,7 +5,7 @@
 # which accompanies this distribution, and is available at
 # http://www.eclipse.org/legal/epl-v10.html
 
-IMAGE_NAME="codenvy/init"
+IMAGE_NAME="rbrain/rideserver-init"
 . $(cd "$(dirname "$0")"; pwd)/../build.include
 
 init "$@"
