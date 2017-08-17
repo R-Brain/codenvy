@@ -1,17 +1,17 @@
 {
-  "title": "Codenvy",
-  "name": "Codenvy",
-  "logoFile": "codenvy-logo.svg",
-  "logoTextFile": "codenvy-logo-text.svg",
-  "favicon": "favicon.ico",
-  "loader": "loader.svg",
-  "ideResources": "/_app/",
-  "helpPath": "https://codenvy.com/support/",
-  "helpTitle": "Help",
-  "supportEmail": "wish@codenvy.com",
-  "oauthDocs": "Please contact your administrator.",
-  "docs" : {
-    "stack" : "/docs/getting-started/runtime-stacks/index.html",
-    "workspace" : "/docs/getting-started/intro/index.html"
-  }
+    "title": "R-Brain",
+    "name": "R-Brain",
+    "logoFile": "header-logo.svg",
+    "logoTextFile": "header-logo.svg",
+    "favicon": "favicon.ico",
+    "loader": "loader.svg",
+    "ideResources": "/_app/",
+    "helpPath": "http://help.r-brain.io/",
+    "helpTitle": "Help",
+    "supportEmail": "support@r-brain.io",
+    "oauthDocs": "Please contact your administrator.",
+    "docs": {
+        "stack": "/docs/getting-started/runtime-stacks/index.html",
+        "workspace": "/docs/getting-started/intro/index.html"
+    }
 }

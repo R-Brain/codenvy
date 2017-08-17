@@ -20,9 +20,9 @@ import org.vectomatic.dom.svg.ui.SVGResource;
  * @author Oleksii Orel
  */
 public interface CodenvyResources extends ClientBundle {
-    @Source("logo/codenvy-logo.svg")
+    @Source("logo/logo.svg")
     SVGResource logo();
 
-    @Source("logo/codenvy-watermark-logo.svg")
+    @Source("logo/watermark-logo.svg")
     SVGResource waterMarkerLogo();
 }
