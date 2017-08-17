@@ -124,10 +124,10 @@ node default {
 #
   $workspace_email_invite_subject = getValue("CODENVY_WORKSPACE_EMAIL_INVITE_SUBJECT","Join My Workspace")
   $organization_email_invite_subject = getValue("CODENVY_ORGANIZATION_EMAIL_INVITE_SUBJECT","Join My Organization")
-  $account_verify_mail_subject = getValue("CODENVY_ACCOUNT_VERIFY_MAIL_SUBJECT","Verify Your Codenvy Account")
-  $account_password_recovery_mail_subject = getValue("CODENVY_ACCOUNT_PASSWORD_RECOVERY_MAIL_SUBJECT","Codenvy Password Recovery")
-  $account_created_byadmin_mail_subject = getValue("CODENVY_ACCOUNT_CREATED_BYADMIN_MAIL_SUBJECT","Welcome To Codenvy")
-  $account_created_byuser_mail_subject = getValue("CODENVY_ACCOUNT_CREATED_BYUSER_MAIL_SUBJECT","Welcome To Codenvy")
+  $account_verify_mail_subject = getValue("CODENVY_ACCOUNT_VERIFY_MAIL_SUBJECT","Verify Your R-Brain Account")
+  $account_password_recovery_mail_subject = getValue("CODENVY_ACCOUNT_PASSWORD_RECOVERY_MAIL_SUBJECT","R-Brain Password Recovery")
+  $account_created_byadmin_mail_subject = getValue("CODENVY_ACCOUNT_CREATED_BYADMIN_MAIL_SUBJECT","Welcome To R-Brain")
+  $account_created_byuser_mail_subject = getValue("CODENVY_ACCOUNT_CREATED_BYUSER_MAIL_SUBJECT","Welcome To R-Brain")
 
 ################################
 # Error reports
@@ -135,17 +135,17 @@ node default {
 #
 # email adress to send report
   $email_to = getValue("CODENVY_EMAIL_TO","admin@example.com")
-  $email_from = getValue("CODENVY_EMAIL_FROM","noreply@codenvy.onprem")
-  $email_subject = getValue("CODENVY_EMAIL_SUBJECT","Codenvy codenvy.onprem error: %logger{20} - %m")
+  $email_from = getValue("CODENVY_EMAIL_FROM","noreply@r-brain.onprem")
+  $email_subject = getValue("CODENVY_EMAIL_SUBJECT","R-Brain r-brain.onprem error: %logger{20} - %m")
   $codenvy_logback_smtp_host = getValue("CODENVY_LOGBACK_SMTP_HOST","localhost")
   $codenvy_logback_smtp_port = getValue("CODENVY_LOGBACK_SMTP_PORT","25")
 
 # Configuration of organization email notifications
 #
-  $organization_email_member_added_subject=getValue("CODENVY_ORGANIZATION_EMAIL_MEMBER_ADDED_SUBJECT","You’ve been added to a Codenvy Organization")
-  $organization_email_member_removed_subject=getValue("CODENVY_ORGANIZATION_EMAIL_MEMBER_REMOVED_SUBJECT","You’ve been removed from a Codenvy Organization")
-  $organization_email_renamed_subject=getValue("CODENVY_ORGANIZATION_EMAIL_RENAMED_SUBJECT","Codenvy Organization renamed")
-  $organization_email_removed_subject=getValue("CODENVY_ORGANIZATION_EMAIL_REMOVED_SUBJECT","Codenvy Organization deleted")
+  $organization_email_member_added_subject=getValue("CODENVY_ORGANIZATION_EMAIL_MEMBER_ADDED_SUBJECT","You’ve been added to a R-Brain Organization")
+  $organization_email_member_removed_subject=getValue("CODENVY_ORGANIZATION_EMAIL_MEMBER_REMOVED_SUBJECT","You’ve been removed from a R-Brain Organization")
+  $organization_email_renamed_subject=getValue("CODENVY_ORGANIZATION_EMAIL_RENAMED_SUBJECT","R-Brain Organization renamed")
+  $organization_email_removed_subject=getValue("CODENVY_ORGANIZATION_EMAIL_REMOVED_SUBJECT","R-Brain Organization deleted")
 
 
 ###############################
@@ -174,7 +174,7 @@ node default {
 #
 # (Mandatory) replace placeholders with some username and password
   $jmx_username = getValue("CODENVY_JMX_USERNAME","admin")
-  $jmx_password = getValue("CODENVY_JMX_PASSWORD","codenvy")
+  $jmx_password = getValue("CODENVY_JMX_PASSWORD","r-brain")
 
 ###############################
 # XMX JAVA_OPTS
