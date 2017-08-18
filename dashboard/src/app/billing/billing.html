@@ -18,60 +18,6 @@
            md-disable-animation
            md-no-ink-bar>
 
-    <!-- Summary tab -->
-    <md-tab md-on-select="billingController.onSelectTab(billingController.tab.Summary)">
-      <md-tab-label>
-        <md-icon md-font-icon="fa-ticket" class="fa che-tab-label-icon"></md-icon>
-        <span class="che-tab-label-title">Summary</span>
-      </md-tab-label>
-      <md-tab-body>
-        <div class="billing-summary">
-          <ram-info account-id="billingController.accountId" ng-if="billingController.accountId"></ram-info>
-          <list-teams account-id="billingController.accountId" ng-if="billingController.accountId"></list-teams>
-        </div>
-      </md-tab-body>
-    </md-tab>
-
-    <!-- Card tab -->
-    <md-tab md-on-select="billingController.onSelectTab(billingController.tab.Card);">
-      <md-tab-label>
-        <md-icon md-font-icon="fa-cc-mastercard" class="fa che-tab-label-icon"></md-icon>
-        <span class="che-tab-label-title">Card</span>
-      </md-tab-label>
-      <md-tab-body>
-        <che-description>
-          Having a question about subscriptions and billings in Codenvy - contact us at <a href="mailto:account-help@codenvy.com">account-help@codenvy.com</a>
-        </che-description>
-        <div class="billing-credit-card">
-          <ng-form name="cardInfoForm">
-            <fieldset ng-disabled="billingController.loading">
-              <card-info ng-init="billingController.registerCardInfoForm(cardInfoForm)"
-                         credit-card="billingController.creditCard"
-                         credit-card-show-widget="billingController.tab.Card === billingController.selectedTabIndex"
-                         credit-card-on-change="billingController.creditCardChanged(creditCard)"
-                         credit-card-on-delete="billingController.creditCardDeleted()"></card-info>
-            </fieldset>
-          </ng-form>
-        </div>
-      </md-tab-body>
-    </md-tab>
-
-    <!-- Invoices tab -->
-    <md-tab md-on-select="billingController.onSelectTab(billingController.tab.Invoices)">
-      <md-tab-label>
-        <md-icon md-font-icon="fa-file-text-o" class="fa che-tab-label-icon"></md-icon>
-        <span class="che-tab-label-title">Invoices</span>
-      </md-tab-label>
-      <md-tab-body>
-        <che-description>
-          Having a question about subscriptions and billings in Codenvy - contact us at <a href="mailto:account-help@codenvy.com">account-help@codenvy.com</a>
-        </che-description>
-        <div class="billing-invoices">
-          <list-invoices account-id="billingController.accountId" ng-if="billingController.accountId && (billingController.tab.Invoices === billingController.selectedTabIndex)"></list-invoices>
-        </div>
-      </md-tab-body>
-    </md-tab>
-
   </md-tabs>
 </md-content>
 

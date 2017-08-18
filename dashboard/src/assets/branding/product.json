@@ -6,7 +6,7 @@
     "favicon": "fav48.png",
     "loader": "loader.svg",
     "ideResources": "/_app/",
-    "helpPath": "http://help.r-brain.io/",
+    "helpPath": "http://help.r-brain.io/ride-server-manual/",
     "helpTitle": "Help",
     "supportEmail": "support@r-brain.io",
     "oauthDocs": "Please contact your administrator.",
