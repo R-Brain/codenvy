@@ -59,13 +59,20 @@
     <md-sidenav id="codenvynavmenu" class='onprem-theme ide-show not-visible' ng-class="waitingLoaded ? 'md-sidenav-left md-whiteframe-z2 dark-menu-bg sidebar-entry' : 'not-visible'" md-component-id="left" md-is-locked-open="!hideNavbar" layout="row">
         <codenvy-nav-bar id="codenvynavbar" layout="row" flex></codenvy-nav-bar>
     </md-sidenav>
+
     <div class="onprem-theme main-page ide-show" layout="column" flex>
         <div role="main" ng-view layout="column" flex ng-show="waitingLoaded && !showIDE"></div>
         <ide-iframe id="ide-iframe-window" ng-show="showIDE && ideIframeLink" flex style="height: 100%"></ide-iframe>
-        <che-footer id="codenvyfooter" che-support-help-path="{{branding.helpPath}}" che-support-help-title="{{branding.helpTitle}}" che-version="{{productVersion}}" che-product-name="R-Brain" che-links="branding.footer.links" che-email="branding.footer.email"
-            ng-show="waitingLoaded && !showIDE">
-            {{branding.footer.content}}
-        </che-footer>
+
+        <div id="codenvyfooter" class="che-footer" layout="row" layout-align="start center" ng-show="waitingLoaded && !showIDE">
+            <span class="che-footer-version" id="footer-version">{{productVersion}}</span>
+            <div id="footer-space" flex></div>
+            <a class="che-footer-button-blue che-footer-button" id="footer-docs" ng-href="{{branding.helpPath}}" target="_blank">Docs<a/>
+
+            <a class="che-footer-button-blue che-footer-button" id="footer-support" ng-href="{{'mailto:' + branding.supportEmail}}">{{branding.helpTitle}}<a/>
+
+            <a class="che-footer-button-blue che-footer-button" id="footer-diagnostics" ng-href="#/diagnostic">Diagnostics<a/>
+        </div>
     </div>
     <!-- Addons are not automatically injected -->
 

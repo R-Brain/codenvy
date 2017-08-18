@@ -11,7 +11,7 @@
     "supportEmail": "support@r-brain.io",
     "oauthDocs": "Please contact your administrator.",
     "docs": {
-        "stack": "/docs/getting-started/runtime-stacks/index.html",
-        "workspace": "/docs/getting-started/intro/index.html"
+        "stack": "http://help.r-brain.io/ride-server-manual/",
+        "workspace": "http://help.r-brain.io/ride-server-manual/"
     }
 }
