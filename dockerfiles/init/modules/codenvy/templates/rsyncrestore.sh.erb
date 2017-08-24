@@ -58,5 +58,5 @@ fi
 rsync ${RSYNC_OPTIONS} \
       --rsh="ssh ${SSH_OPTIONS}" \
       --rsync-path="${RSYNC_COMMAND}" \
-      --include='.codenvy/' --filter=':- .gitignore' \
+      --include='.codenvy/' --filter='protect ride/' --filter='protect ride/data/' --filter='protect ride/data/**/*' --filter='protect ride/libraries/' --filter='protect ride/libraries/**/*' --filter=':- .gitignore' \
       ${SRC_FOLDER} ${HOST}:${DST_FOLDER}
