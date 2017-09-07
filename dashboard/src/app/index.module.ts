@@ -264,6 +264,10 @@ initModule.factory('CsrfPreventionInterceptor', ($injector, $q) => {
 
       // the X-CSRF-Token=0ABCD(actual token) if request modifies server state and token is fetched
       if (isModifyingMethod(config.method)) {
+        // Sometimes the GET requests below don't contain the JSESSIONID, in which case the server returns a wrong X-CSRF-Token
+        // Removing the caching here, to always require requestCSRFToken(), should fix the problem.
+        // see also https://github.com/TypeFox/RIDE/issues/996
+        csrfToken = undefined;
         return $q.when((csrfToken) || requestCSRFToken()).then((token: string) => {
             config.headers[CSRF_TOKEN_HEADER_NAME] = token;
             return config;
