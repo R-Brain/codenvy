@@ -72,6 +72,7 @@ frontend https-in
     acl url_login path_beg -i /site/login
     acl url_factory url_sub -i factory
     acl use_nginx path_reg ^/[0-9]+_.+$
+    acl use_ssl_proxy path_beg /ssl_
     acl use_agents path_beg -i /agent-binaries
 
     # redirect /site/login to /site/create_account if no cookie logged_in
@@ -81,6 +82,6 @@ frontend https-in
     # WWW redirection
     redirect prefix <%= scope.lookupvar('haproxy::host_protocol') %>://<%= scope.lookupvar('haproxy::host_url') %> code 301 if is_www
 
-    use_backend nginx_bk if use_nginx
+    use_backend nginx_bk if use_nginx or use_ssl_proxy
     use_backend agents_bk if use_agents
     default_backend tomcat_bk

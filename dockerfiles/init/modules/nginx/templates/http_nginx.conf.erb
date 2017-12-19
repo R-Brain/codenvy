@@ -85,6 +85,25 @@ error_log                     /var/log/nginx/error.log error;
           client_max_body_size 32m;
           access_log   /var/log/nginx/access-81.log;
           server_name  localhost;
+
+          # forward ssl_
+          location ~* ^/ssl_(?<myport>\d+)/p8080/(?<rest>.*)$ {
+            proxy_pass http://$host:$myport/$rest;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            # increased the idle timeout to 30min (default: 60s)
+            proxy_read_timeout 1800s;
+            proxy_send_timeout 1800s;
+
+            proxy_set_header Accept-Encoding "";
+            sub_filter 'src="/' 'src="/ssl_$myport/p8080/';
+            sub_filter '"/ride/vs"' '"/ssl_$myport/p8080/ride/vs"';
+            sub_filter '"baseUrl": "/"' '"baseUrl": "/ssl_$myport/p8080/"';
+            sub_filter_once off;
+            client_max_body_size 0;
+          }
+
           location ~* ^/(?<myport>[0-9]+)_(?<myhost>[^/]+)/.*$ {
             proxy_pass  http://$myhost:$myport;
             # proxy_http_version 1.1;
